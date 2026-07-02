@@ -15,23 +15,7 @@ The model was trained using MRI images resized to **224×224 pixels** and achiev
 
 ---
 
-## 📂 Dataset Structure
 
-```text
-dataset/
-│
-├── Training/
-│   ├── glioma/
-│   ├── meningioma/
-│   ├── notumor/
-│   └── pituitary/
-│
-└── Testing/
-    ├── glioma/
-    ├── meningioma/
-    ├── notumor/
-    └── pituitary/
-```
 
 Each class contains approximately **1400 MRI images**.
 
