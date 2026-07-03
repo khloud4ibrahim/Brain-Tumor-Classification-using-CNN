@@ -1,20 +1,19 @@
-#  🧠 Brain Tumor Classification using CNN
+#   🧠 Brain Tumor Classification using CNN
 
-A deep learning project for classifying brain MRI images into four categories using a Convolutional Neural Network (CNN) built with TensorFlow and Keras.
+A Deep Learning project for classifying brain MRI images into four categories using a Convolutional Neural Network (CNN) built with TensorFlow and Keras, with an interactive Streamlit application for predictions.
 
 ## 📌 Project Overview
 
-This project aims to classify brain MRI scans into one of four classes:
+This project classifies brain MRI scans into one of four classes:
 
 * Glioma
 * Meningioma
-* Pituitary Tumor
 * No Tumor
+* Pituitary Tumor
 
-The model was trained using MRI images resized to **224×224 pixels** and achieved promising classification performance.
+The model was trained on MRI images resized to **224×224 pixels** and deployed using **Streamlit** for real-time predictions.
 
 ---
-
 
 
 Each class contains approximately **1400 MRI images**.
@@ -23,24 +22,15 @@ Each class contains approximately **1400 MRI images**.
 
 ## ⚙️ Data Preprocessing
 
-The preprocessing pipeline includes:
-
-* Loading MRI images
-* Converting images to RGB format
-* Resizing images to **224 × 224**
-* Normalizing pixel values to the range **[0,1]**
-* Converting labels using One-Hot Encoding
-* Splitting the dataset into:
-
-  * Training Set
-  * Validation Set
-  * Testing Set
+* Convert images to RGB
+* Resize images to **224 × 224**
+* Normalize pixel values to **[0,1]**
+* One-Hot Encode labels
+* Split data into training, validation, and testing sets
 
 ---
 
 ## 🏗️ CNN Architecture
-
-The model consists of:
 
 * Conv2D (32 filters)
 * MaxPooling2D
@@ -51,7 +41,7 @@ The model consists of:
 * Flatten Layer
 * Dense Layer (128 neurons)
 * Dropout (0.5)
-* Output Layer (4 neurons, Softmax)
+* Dense Layer (4 neurons, Softmax)
 
 ---
 
@@ -61,29 +51,44 @@ The model consists of:
 * Loss Function: Categorical Crossentropy
 * Batch Size: 32
 * Epochs: 10
-* Input Size: 224×224×3
+* Input Size: 224 × 224 × 3
 
 ---
 
-## 📊 Technologies Used
+## 🚀 Streamlit Application
 
-* Python
-* TensorFlow
-* Keras
-* NumPy
-* OpenCV
-* Pillow
-* Matplotlib
-* Scikit-learn
+The project includes a Streamlit interface that allows users to:
+
+* Upload MRI images
+* Predict tumor type
+* Display prediction confidence scores
+
+Run the application locally:
+
+```bash
+streamlit run streamlit_file.py
+```
 
 ---
 
-## 💾 Model Saving
-
-The trained model is saved using:
+## 💾 Saved Model
 
 ```python
 model.save("brain_tumor_cnn.keras")
 ```
 
+---
+
+## 🛠️ Technologies Used
+
+* Python
+* TensorFlow
+* Keras
+* Streamlit
+* NumPy
+* OpenCV
+* Matplotlib
+* Scikit-learn
+
+---
 
